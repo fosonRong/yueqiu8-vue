@@ -28,8 +28,8 @@
 .weui-col-25{ width: 24.4%; float: left;}
 .weui-col-33{width: 33%; float: left;}
 .banner{ width: 100%}
-.banner_1{ clear:both;}
-.banner_1 img{ width:100%; height:auto;}
+.zuqiuJPEG{ clear:both;}
+.zuqiuJPEG img{ width:auto; height:auto;text-align: center;}
 .list_cell_3{ overflow:hidden; border-left:1px solid #ebebeb; border-top:1px solid #ebebeb; }
 .list_cell_3 img{ width:100%; }
 
@@ -58,7 +58,7 @@
         </div>
     </div>
     <div class="list_wrap_1">
-      <h2 class="list_title_1">热门推荐</h2>
+      <h2 class="list_title_1">赛事推荐</h2>
         <div class="weui-row weui-no-gutter list_box_1">
             <div class="weui-col-50 list_cell_1" v-for="item in goods">
                 <div class="list_innerCell_1">
@@ -82,13 +82,13 @@
             </div>
         </div>
     </div>
-   <img  class="banner" src="../assets/img/banner_1.jpg" alt="">
+   <img  class="banner" src="../assets/img/zuqiuJPEG.jpg" alt="">
     <!--======list_wrap_2======-->
    <div class="copyright_box_1">
    </div>
    <tabbar  style="position:fixed">
       <tabbar-item link="/index?id=1">
-        <img slot="icon" src="../assets/img/footer_nav_1_active.png">
+        <img slot="icon" src="../assets/img/footer_boll_1_active.png">
         <span slot="label" style="color:#dd2727">首页</span>
       </tabbar-item>
       <tabbar-item link="/sort">
@@ -100,7 +100,7 @@
         <span slot="label">购物车</span>
       </tabbar-item>
       <tabbar-item link="/user">
-        <img slot="icon" src="../assets/img/footer_nav_4.png">
+        <img slot="icon" src="../assets/img/footer_nav_me.png">
         <span slot="label">我</span>
       </tabbar-item>
     </tabbar>
@@ -155,7 +155,7 @@
         if(localStorage.getItem("openid")==null){
           if(getQuery.getQueryString("code")==null){
           let fromurl=location.href;
-          let url="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx066707bb3a2536a&redirect_uri="+fromurl+"&response_type=code&scope=snsapi_userinfo&state=1#wechat_redirect"
+          let url="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx2f781590fc4b6106&redirect_uri="+fromurl+"&response_type=code&scope=snsapi_userinfo&state=1#wechat_redirect"
             //window.location.href=url
         }else{
            API.user.getopenid({"code":getQuery.getQueryString("code")}).then(
